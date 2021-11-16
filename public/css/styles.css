@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body {
+  background-color: #f0f2f4;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  border-bottom: 1px solid #c4c9d4;
+}
+
+.nav-title {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #98a1b3;
+  text-transform: uppercase;
+}
+
+.nav-list {
+  width: 150px;
+}
+
+.nav-list ul li {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.nav-list ul li a {
+  color: #98a1b3;
+}
+
+.container-side {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.side-nav {
+  width: 200px;
+  height: 100vh;
+  background-color: tomato;
+}
+
+.user-choice {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.user-choice--today {
+  width: 200px;
+}
+
+.container-sign-up,
+.container-login {
+  height: 100vh;
+}
+
+.container-sign-up-left,
+.container-login-left {
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  background-color: #363c49;
+  border-radius: 20px;
+  margin-right: 15px;
+}
+
+.container-sign-up-left--title,
+.container-login-left--title {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.container-sign-up-left form label,
+.container-login-left form label {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.container-sign-up-left form input,
+.container-login-left form input {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.container-sign-up-left button,
+.container-login-left button {
+  font-family: 'Noto Sans', sans-serif;
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 20px;
+  border: none;
+  width: 50%;
+  margin: 20px auto;
+  transition: all ease-in-out 0.1;
+}
+
+.container-sign-up-left button:focus,
+.container-login-left button:focus {
+  transform: translateY(3px);
+}
+
+.container-sign-up-right,
+.container-login-right {
+  width: 400px;
+  height: 400px;
+}
+
+.container-sign-up-right--title,
+.container-login-right--title {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+  letter-spacing: 2px;
+  height: 80px;
+}
+
+.container-sign-up-right--description {
+  height: 320px;
+  width: 320px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+
+.container-login {
+  height: 100vh;
+}
