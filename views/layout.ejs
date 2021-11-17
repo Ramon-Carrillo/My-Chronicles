@@ -16,38 +16,6 @@
     <title>Express Auth</title>
   </head>
   <body>
-    <% if (!currentUser) { %>
-    <header class="df jcc aic fdc">
-      <nav class="container df aic jcsb pa1">
-        <div class="nav-title">My Chronicles</div>
-        <div class="nav-list">
-          <ul class="df aic jcsb">
-            <li><a href="/auth/signup">Signup</a></li>
-            <li><a href="/auth/login">Login</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <% } else { %>
-    <header class="container-side">
-      <nav class="side-nav">
-        <div class="user df jcc aic pt6 ph1">
-          <i class="fas fa-user-circle fa-4x mr1"></i>
-          <div class="user-info df aic fdc jcc">
-            <div class="user-welcome ft6 fw7 lh1-3">Welcome</div>
-            <div class="user-name ft4"><%= currentUser.name %></div>
-          </div>
-        </div>
-        <div class="user-choice">
-          <div class="user-choice--today df jcc aic">
-            <i class="far fa-bookmark fa-3x"></i>
-            <div class="ft4">Today</div>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- <li><a href="/auth/logout">Logout</a></li>
-    <li><a href="/profile">Profile</a></li> -->
-    <% } %> <%- include('partials/alerts') %> <%- body %>
+    <%- include('partials/navbar') %> <%- include('partials/alerts') %> <%- body %>
   </body>
 </html>
