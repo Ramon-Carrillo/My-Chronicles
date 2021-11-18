@@ -154,3 +154,21 @@ a,
   height: 100vh;
   background-color: #f0f2f4;
 }
+
+.grid-container {
+  background-color: aquamarine;
+
+  margin-left: 20px;
+  width: 1220px;
+  height: 100vh;
+  border: 1px solid black;
+}
+
+.form1 textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  border-radius: 20px;
+  padding-top: 20px;
+  overflow: auto;
+}

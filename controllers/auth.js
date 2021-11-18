@@ -18,7 +18,7 @@ router.post('/signup', (req, res) => {
     })
     .then(([createdUser, wasCreated]) => {
       if (wasCreated) {
-        console.log(`just created the following user:`, createdUser);
+        // console.log(`just created the following user:`, createdUser);
         // res.send('POST form data from signup.ejs, then redirect')
         passport.authenticate('local', {
           successRedirect: '/', // !-> FLASH <-!
