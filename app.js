@@ -6,6 +6,7 @@ const session = require('express-session');
 const passport = require('./config/ppConfig');
 const flash = require('connect-flash');
 const isLoggedIn = require('./middleware/isLoggedIn');
+const methodOverride = require('method-override');
 
 // views (ejs and layouts) set up
 app.set('view engine', 'ejs');
@@ -16,6 +17,9 @@ app.use('/css', express.static(__dirname + 'public/css'));
 
 // body parser middelware
 app.use(express.urlencoded({ extended: false }));
+
+// method-override allows you to override methods with a query parameter
+app.use(methodOverride('_method'));
 
 // session middleware
 app.use(
