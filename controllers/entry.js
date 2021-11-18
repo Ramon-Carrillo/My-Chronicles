@@ -3,14 +3,18 @@ const router = express.Router();
 const db = require('../models');
 
 router.get('/', (req, res) => {
-  db.entry.findAll().then((entries) => {
-    console.log(entries);
-  });
+  db.entry
+    .findAll()
+    .then((entries) => {
+      res.render('indexEntries', { results: entries });
+    })
+    .catch((err) => {
+      console.error(err.message);
+    });
 });
 
 router.post('/', (req, res) => {
   const data = JSON.parse(JSON.stringify(req.body));
-  console.log('this is data', data);
   db.entry
     .create({
       wins: data.wins,
@@ -20,9 +24,11 @@ router.post('/', (req, res) => {
       threats: data.threats,
       todos: data.todos,
     })
-    .then((createdEntry) => {
-      console.log('db instance created: \n', createdEntry);
-      res.redirect('/');
+    .then(() => {
+      res.redirect(`/entry?wins=&allies=&growth=&grateful=&threats=&todos=`);
+    })
+    .catch((error) => {
+      console.error(error.message);
     });
 });
 
@@ -36,4 +42,7 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+router.get('/:id', (req, res) => {
+  console.log('this is the fave id\n', req.params.id);
+});
 module.exports = router;
