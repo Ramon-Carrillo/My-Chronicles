@@ -205,4 +205,11 @@ a,
 }
 
 .btn {
+  height: 50px;
+  border-radius: 20px;
+  font-family: 'Noto Sans', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #c4c9d4;
+  background-color: #404653;
 }

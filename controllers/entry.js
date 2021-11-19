@@ -15,6 +15,7 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   const data = JSON.parse(JSON.stringify(req.body));
+  console.log(data);
   db.entry
     .create({
       wins: data.wins,
