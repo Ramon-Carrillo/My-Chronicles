@@ -15,9 +15,10 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   const data = JSON.parse(JSON.stringify(req.body));
-  console.log(data);
+  console.log(res.locals.currentUser.id);
   db.entry
     .create({
+      userId: res.locals.currentUser.id,
       wins: data.wins,
       allies: data.allies,
       growth: data.growth,
