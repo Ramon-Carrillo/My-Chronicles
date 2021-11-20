@@ -51,6 +51,9 @@ app.use('/auth', require('./controllers/auth'));
 // entry controller
 app.use('/entry', require('./controllers/entry'));
 
+// image controller
+app.use('/image', require('./controllers/image'));
+
 // home route
 app.get('/', isLoggedIn, (req, res) => {
   res.render('home');
