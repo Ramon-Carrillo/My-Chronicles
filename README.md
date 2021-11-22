@@ -9,6 +9,7 @@ In this application you will be given 6 questions to help you succeed in life. I
 
 - HTML,
 - CSS,
+- Beard-Atomic CSS Framework
 - EJS,
 - NodeJS,
 - ExpressJS,
