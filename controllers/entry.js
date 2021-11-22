@@ -15,7 +15,6 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   const data = JSON.parse(JSON.stringify(req.body));
-  console.log(res.locals.currentUser.id);
   db.entry
     .create({
       userId: res.locals.currentUser.id,

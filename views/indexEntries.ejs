@@ -1,59 +1,16 @@
 <main class="main-content df">
-  <header class="container-side">
-    <nav class="side-nav">
-      <div class="user df jcc aic pt8 ph1">
-        <i class="fas fa-user-circle fa-4x mr1"></i>
-        <div class="user-info df aic fdc jcc">
-          <div class="user-welcome ft6 fw7 lh1-3">Welcome</div>
-          <div class="user-name ft4"><%= currentUser.name %></div>
-        </div>
-      </div>
-      <div class="user-options df jcc aic fdc mt8">
-        <div class="user-choice df jcc aic">
-          <i class="far fa-bookmark fa-2x i100"></i>
-          <div class="user-info df aic fdc jcc">
-            <div class="user-text ft4 lh1-3">Today</div>
-          </div>
-        </div>
-        <div class="user-choice df jcc aic mt1">
-          <i class="fas fa-bars fa-2x i100"></i>
-          <div class="user-info df aic fdc jcc">
-            <div class="user-text ft4 lh1-3">Timeline</div>
-          </div>
-        </div>
-        <div class="user-choice df jcc aic mt1">
-          <i class="far fa-calendar fa-2x i100"></i>
-          <div class="user-info df aic fdc jcc">
-            <div class="user-text ft4 lh1-3-">Calendar</div>
-          </div>
-        </div>
-        <div class="user-choice df jcc aic mt1 mb3">
-          <i class="far fa-image fa-2x i100"></i>
-          <div class="user-info df aic fdc jcc">
-            <div class="user-text ft4 lh1-3">Attachments</div>
-          </div>
-        </div>
-        <div class="user-choice df jcc aic">
-          <i class="fas fa-sign-out-alt fa-2x i100"></i>
-          <div class="user-info df aic fdc jcc">
-            <div class="user-text ft4 lh1-3"><a href="/auth/logout">Logout</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="user-journal ft4 mt8">
-        <div class="tac user-text">Journal</div>
-      </div>
-    </nav>
-  </header>
+  <%- include('./partials/nav.ejs') %>
 
   <section class="grid-container">
     <div class="frame--stay pa4">
       <%results.forEach(result => {%>
-      <h3>
-        <a href="/entry/<%= result.id %>"><%= result.createdAt %></a>
-      </h3>
+      <ul class="ft5">
+        <li class="mt2 fw7">
+          <a class="index-entry-text" href="/entry/<%= result.id %>"><%= result.createdAt %></a>
+        </li>
+      </ul>
       <form action="/entry/<%= result.id %>?_method=DELETE" method="post">
-        <button type="submit">Remove</button>
+        <button class="btn mt3" type="submit">Remove</button>
       </form>
       <%})%>
     </div>

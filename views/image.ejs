@@ -1,0 +1,22 @@
+<main class="main-content df">
+  <%- include('./partials/nav.ejs') %>
+  <!-- Entry Part of Site -->
+  <section class="grid-container">
+    <div class="grid-container--form pt6 ph6">
+      <ul class="card frame">
+        <%results.forEach(result => {%>
+        <li class="blk3 mb2">
+          <img src="<%=result.src%> " alt="" class="mb-3" />
+          <form action="/image/<%= result.id %>?_method=DELETE" method="post">
+            <button class="btn mt3 w100" type="submit">Remove</button>
+          </form>
+          <%})%>
+        </li>
+      </ul>
+    </div>
+    <form enctype="multipart/form-data" action="/image" method="POST">
+      <input type="file" name="myFile" />
+      <button type="submit" class="btn">picture</button>
+    </form>
+  </section>
+</main>

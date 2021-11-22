@@ -213,3 +213,16 @@ a,
   color: #c4c9d4;
   background-color: #404653;
 }
+
+.card {
+  height: 300px;
+}
+
+img {
+  height: 200px;
+  width: 250px;
+}
+
+.index-entry-text {
+  color: #2b303b;
+}

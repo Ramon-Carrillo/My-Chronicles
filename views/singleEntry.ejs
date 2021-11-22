@@ -1,96 +1,46 @@
 <main class="main-content df">
-  <header class="container-side">
-    <nav class="side-nav">
-      <div class="user df jcc aic pt8 ph1">
-        <i class="fas fa-user-circle fa-4x mr1"></i>
-        <div class="user-info df aic fdc jcc">
-          <div class="user-welcome ft6 fw7 lh1-3">Welcome</div>
-          <div class="user-name ft4"><%= currentUser.name %></div>
-        </div>
-      </div>
-      <div class="user-options df jcc aic fdc mt8">
-        <div class="user-choice df jcc aic">
-          <i class="far fa-bookmark fa-2x i100"></i>
-          <div class="user-info df aic fdc jcc">
-            <div class="user-text ft4 lh1-3">Today</div>
-          </div>
-        </div>
-        <div class="user-choice df jcc aic mt1">
-          <i class="fas fa-bars fa-2x i100"></i>
-          <div class="user-info df aic fdc jcc">
-            <div class="user-text ft4 lh1-3">Timeline</div>
-          </div>
-        </div>
-        <div class="user-choice df jcc aic mt1">
-          <i class="far fa-calendar fa-2x i100"></i>
-          <div class="user-info df aic fdc jcc">
-            <div class="user-text ft4 lh1-3-">Calendar</div>
-          </div>
-        </div>
-        <div class="user-choice df jcc aic mt1 mb3">
-          <i class="far fa-image fa-2x i100"></i>
-          <div class="user-info df aic fdc jcc">
-            <div class="user-text ft4 lh1-3">Attachments</div>
-          </div>
-        </div>
-        <div class="user-choice df jcc aic">
-          <i class="fas fa-sign-out-alt fa-2x i100"></i>
-          <div class="user-info df aic fdc jcc">
-            <div class="user-text ft4 lh1-3"><a href="/auth/logout">Logout</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="user-journal ft4 mt8">
-        <div class="tac user-text">Journal</div>
-      </div>
-    </nav>
-  </header>
+  <%- include('./partials/nav.ejs') %>
   <!-- Entry Part of Site -->
   <section class="grid-container">
     <div class="frame--stay pa4">
-      <div class="quotes blk12"><h1>I am text</h1></div>
       <form
         method="POST"
         action="/entry/<%=id %>/?_method=PUT"
         class="frame pa6 df jcc aic blk md-blk6 form1"
       >
-        <div class="blk md-blk6">
-          <label for="text" class="i100 ft5 mb1">Today's Wins:</label>
-          <textarea type="text" name="wins" cols="50" rows="8" class="i100 mb1">
-<%= wins  %> </textarea
+        <div class="grid-container-textarea blk mr3">
+          <label for="text" class="ft5">Today's Wins:</label>
+          <textarea type="text" name="wins" cols="50" rows="6" class="mt1"><%= wins %>  </textarea>
+        </div>
+        <div class="grid-container-textarea blk">
+          <label for="text" class="i100 ft5 mb1">Today's Allies:</label>
+          <textarea type="text" name="allies" cols="50" rows="6" class="mt1">
+<%= allies %> </textarea
           >
         </div>
-        <div class="blk md-blk6">
-          <label for="text" class="i100 ft5 mb1">Today's Wins:</label>
-          <textarea type="text" name="allies" cols="50" rows="8" class="i100 mb1">
-<%= allies  %></textarea
+        <div class="grid-container-textarea blk mr3">
+          <label for="text" class="i100 ft5 mb1">Personal Growth:</label>
+          <textarea type="text" name="growth" cols="50" rows="6" class="mt1">
+<%= growth %> </textarea
           >
         </div>
-        <div class="blk md-blk6">
-          <label for="text" class="i100 ft5 mb1">Today's Wins:</label>
-          <textarea type="text" name="growth" cols="50" rows="8" class="i100 mb1">
-<%= growth  %> </textarea
+        <div class="grid-container-textarea blk">
+          <label for="text" class="i100 ft5 mb1">Today I am grateful for:</label>
+          <textarea type="text" name="grateful" cols="50" rows="6" class="mt1">
+<%= grateful%></textarea
           >
         </div>
-        <div class="blk md-blk6">
-          <label for="text" class="i100 ft5 mb1">Today's Wins:</label>
-          <textarea type="text" name="grateful" cols="50" rows="8" class="i100 mb1">
-<%= grateful  %> </textarea
+        <div class="grid-container-textarea blk mr3">
+          <label for="text" class="i100 ft5 mb1">Today's Threats:</label>
+          <textarea type="text" name="threats" cols="50" rows="6" class="mt1">
+<%= threats %> </textarea
           >
         </div>
-        <div class="blk md-blk6">
-          <label for="text" class="i100 ft5 mb1">Today's Wins:</label>
-          <textarea type="text" name="threats" cols="50" rows="8" class="i100 mb1">
-<%= threats  %> </textarea
-          >
+        <div class="grid-container-textarea blk">
+          <label for="text" class="i100 ft5 mb1">Today's to-dos:</label>
+          <textarea type="text" name="todos" cols="50" rows="6" class="mt1"><%= todos %> </textarea>
         </div>
-        <div class="blk md-blk6">
-          <label for="text" class="i100 ft5 mb1">Today's Wins:</label>
-          <textarea type="text" name="todos" cols="50" rows="8" class="i100 mb1">
-<%= todos  %> </textarea
-          >
-        </div>
-        <button type="submit">delete</button>
+        <button class="blk2 btn ft6 uppercase" type="submit">chronicle</button>
       </form>
     </div>
   </section>
