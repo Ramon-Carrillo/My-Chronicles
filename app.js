@@ -64,6 +64,7 @@ app.get('/profile', isLoggedIn, (req, res) => {
   res.render('profile');
 });
 
-app.listen(process.env.PORT || 5000, function () {
-  console.log('listening on *:5000');
+let PORT = process.env.PORT || 5000;
+app.listen(PORT, function () {
+  console.log('listening on 5000');
 });
